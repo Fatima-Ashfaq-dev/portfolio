@@ -10,6 +10,6 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
-  base: './', // ✅ This forces relative paths so Netlify serves files correctly
+  base: '/', 
 })
 
