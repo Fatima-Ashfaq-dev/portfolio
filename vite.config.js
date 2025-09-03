@@ -10,5 +10,5 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
-  base: '/',  // ✅ IMPORTANT for Netlify root deployment
+  base: '/', // ✅ VERY IMPORTANT for Netlify
 })
