@@ -32,71 +32,9 @@ const animateValue = (refVar, start, end, duration) => {
   requestAnimationFrame(step);
 };
 
-// onMounted(() => {
-//   // Animate only when stats section is visible
-//   const statsSection = document.querySelector(".stats");
-//   let triggered = false;
-
-//   const observer = new IntersectionObserver((entries) => {
-//     if (entries[0].isIntersecting && !triggered) {
-//       triggered = true;
-//       animateValue(projects, 0, 200, 2000);
-//       animateValue(industries, 0, 10, 2000);
-//       animateValue(experience, 0, 7, 2000);
-//     }
-//   }, { threshold: 0.5 });
-
-//   if (statsSection) observer.observe(statsSection);
-// });
-
-// ======================
-// AOS INIT
-// ======================
-// onMounted(() => {
-//   AOS.init({
-//     duration: 1000,
-//     once: true,
-//     easing: "ease-in-out",
-//   });
-// });
-
   // store swiper instance
   const projectSwiper = ref(null);
-
-  // onMounted(() => {
-  //   if (projectSwiper.value) {
-  //     const swiper = projectSwiper.value.swiper;
-
-  //     document.querySelectorAll(".project-card").forEach(card => {
-  //       card.addEventListener("mouseenter", () => {
-  //         swiper.autoplay.stop();
-  //       });
-  //       card.addEventListener("mouseleave", () => {
-  //         swiper.autoplay.start();
-  //       });
-  //     });
-  //   }
-  // });
-
-
-  // onMounted(() => {
-  //   const canvases = document.querySelectorAll(".canvas3d");
-
-  //   canvases.forEach((canvas) => {
-  //     const app = new Application(canvas);
-  //     app.load("https://prod.spline.design/wMUjxT0aovzV5Dra/scene.splinecode").then(() => {
-  //       // Disable zoom/scroll wheel
-  //       if (app.controls) {
-  //         app.controls.enableZoom = false; // turn off zoom
-  //         app.controls.enablePan = true;   // keep panning if you want
-  //         app.controls.enableRotate = true; // keep rotation
-  //       }
-  //     });
-
-  //     // Extra safety: prevent wheel event on canvas
-  //     canvas.addEventListener("wheel", (e) => e.preventDefault(), { passive: false });
-  //   });
-  // });
+ 
   // Row 1 Tools
   onMounted(() => {
   // Animate counters
@@ -205,10 +143,7 @@ const animateValue = (refVar, start, end, duration) => {
     <path stroke="white" stroke-width="2" stroke-linecap="round" d="M4 7h22M4 15h22M4 23h22"/>
   </svg>
 </button>
-      <!-- <button class="navbar-toggler border-0 text-white d-lg-none" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon text-white"></span>
-      </button> -->
+   
     </div>
 
     <!-- Mobile Menu -->
